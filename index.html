@@ -14,15 +14,15 @@
     body{
         align-items: center;
         text-align: center;
-         background-color: black;
+         background-color: rgb(0, 0, 0);
 
     }
     .generate{
    padding: 10px;
    background-color: lawngreen;
    font-size: 20px;
-   border: 5px solid black;
-        outline:none;
+   border: 5px solid rgb(255, 255, 255);
+   outline: none;
     }
     .con1{
         height: 100px;
@@ -69,11 +69,11 @@ var ccon1 = document.querySelector('.con1');
 var ccon2 = document.querySelector('.con2');
 var ccon3 = document.querySelector('.con3');
 var ccon4 = document.querySelector('.con4');
-
+var but = document.querySelector('.generate');
     function gh()
     {
         var col = randomColor({
-            count:4
+            count:7
         });
         console.log(col);
         colour1.innerText = col[1];
@@ -90,6 +90,9 @@ ccon3.style.backgroundColor = col[0];
 
 colour4.innerText = col[3];
 ccon4.style.backgroundColor = col[3];
+document.body.style.backgroundColor = col[4];
+but.style.backgroundColor = col[5];
+but.style.borderColor = col[6];
 
 
     }
